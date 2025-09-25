@@ -75,22 +75,19 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - ✅ Delete Employee  
 - ✅ Pagination Support  
 
-
-Added
-1. Pagination
-
-[] Setup Environment
+## Setup Environment
 1. Run PostgreSQL.
 2. Untuk nama database yang saya pakai => DB_DATABASE=api-employee
 
-[] Generate Model
+## Generate Model
 1. php artisan make:model Employee -m
 Notes: kalau pakai model, file migration otomatis ke buat, jadi opsi perintah berikutnya optional.
 
-[] File Migration
+## File Migration
 1. php artisan make:migration create_employees_table
 
-   public function up(): void
+```php
+    public function up(): void
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
@@ -100,10 +97,12 @@ Notes: kalau pakai model, file migration otomatis ke buat, jadi opsi perintah be
             $table->timestamps();
         });
     }
+```
 
-[] Setup seeder (if need dummy)
+## Setup seeder (if need dummy)
 1. php artisan make:seeder EmployeeSeeder
    
+   ```php
    class EmployeeSeeder extends Seeder
     {
         /**
@@ -132,8 +131,10 @@ Notes: kalau pakai model, file migration otomatis ke buat, jadi opsi perintah be
             }
         }
     }
+    ```
 2. Call EmployeeSeeder di Database Seeder
 
+```php
    class DatabaseSeeder extends Seeder
     {
         /**
@@ -144,8 +145,8 @@ Notes: kalau pakai model, file migration otomatis ke buat, jadi opsi perintah be
             $this->call(EmployeeSeeder::class);
         }
     }
-
-[] Run Laravel
+```
+## Run Laravel
 1. php artisan serve
 
 
