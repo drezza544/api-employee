@@ -82,7 +82,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Generate Model
 1. php artisan make:model Employee -m
 
-Notes: kalau pakai model, file migration otomatis ke buat, jadi opsi perintah berikutnya optional.
+Notes: kalau pakai generate model, file migration otomatis ke buat, jadi opsi perintah berikutnya optional.
 
 ## File Migration
 1. php artisan make:migration create_employees_table
