@@ -82,7 +82,7 @@ class EmployeeController extends Controller
      */
     public function store(Request $request) {
         $validated = $request->validate([
-            'name' => 'required|string',
+            'name' => 'required|string|min:5',
             'email' => 'required|email|unique:employees',
             'position' => 'string'
         ]);
@@ -116,7 +116,7 @@ class EmployeeController extends Controller
         $employee = Employee::findOrFail($id);
 
         $validated = $request->validate([
-            'name' => 'string',
+            'name' => 'string|min:5',
             'email' => 'email|unique:employees,email,' . $id,
             'position' => 'string'
         ]);

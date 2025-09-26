@@ -75,6 +75,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - ✅ Delete Employee  
 - ✅ Pagination Support  
 
+## Install Project
+1. Composer install
+
+## Added File Environment
+1.  cp .env.example .env
+
 ## Setup Environment
 1. Run PostgreSQL.
 2. Untuk nama database yang saya pakai => DB_DATABASE=api-employee
