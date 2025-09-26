@@ -85,6 +85,17 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 1. Run PostgreSQL.
 2. Untuk nama database yang saya pakai => DB_DATABASE=api-employee
 
+```json
+{
+    DB_CONNECTION=pgsql
+    DB_HOST=127.0.0.1
+    DB_PORT=5432
+    DB_DATABASE=api-employee
+    DB_USERNAME=postgres
+    DB_PASSWORD=''
+}
+```
+
 ## Generate Model
 1. php artisan make:model Employee -m
 
